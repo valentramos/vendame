@@ -1,0 +1,9 @@
+.active {
+    color: red !important;
+}
+.active:after {
+    opacity: 1 !important;
+}
+.active:before {
+    opacity: 1 !important;
+}

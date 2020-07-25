@@ -1,189 +1,207 @@
-<!-- Latest News -->
-<section id="et-latest-news" class="container-fluid mt-5">
-    <div class="section-heading">
-        <p>Blog posts listed here with all types</p>
-        <br>
-        <h2 class="mb-0">Capacitaciones</h2>
+<!-- Page Header -->
+<section id="et-pagehead"
+    class="container-fluid text-center text-white img-overlay no-hover position-relative pt-5 pb-5">
+    <div class="container position-relative pt-5 pb-5 mt-5 mb-5">
+        <h1 class="box-heading mb-5 position-relative mb-0 text-white">Capacitaciones</h1>
     </div>
-    <div class="owl-carousel owl-theme">
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-1.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Whats in Meeting ?</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+    <div class="breadcrumb position-absolute text-center m-0 justify-content-center bg-transparent text-white">
+        <a href="#" class="text-white d-inline-block p-2">Inicio</a>
+        <a href="#" class="text-white d-inline-block p-2">Capacitaciones</a>
+    </div>
+</section>
+
+<!-- Latest News -->
+<section id="et-latest-news" class="container-fluid">
+    <div class="container">
+        <div class="section-heading">
+            <p>Lorem ipsum dolor emet</p>
+            <br>
+            <h2 class="mb-0">Latest News</h2>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow" *ngFor="let training of infoService.capacitaciones" >
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-1.jpg"
+                                alt="Author"></span>
+                        <img src="assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top">
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">{{ training.nombre }}</a></h4>
+                        <p class="description">
+                            {{ training.resumen }}
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-2.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-2.jpg" alt="img" class="img-fluid rounded-top">
+
+            <div class="col-md-4">
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+                                src="https://player.vimeo.com/video/176909027"
+                                style="position:absolute;top:0;border:0;left:0;width:100%;height:100%;"
+                                allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+                        <script src="https://player.vimeo.com/api/player.js"></script>
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-1.jpg"
+                                alt="Author"></span>
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Love the Ride</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <iframe class="border-0 position-relative w-100" width="100" height="300" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/118951508&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-2.jpg"
+                                alt="Author"></span>
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-3.jpg"
+                                alt="Author"></span>
+                        <img src="assets/img/event-grid-2.jpg" alt="img" class="img-fluid rounded-top">
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-3.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-3.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Help African</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+
+            <div class="col-md-4">
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-3.jpg"
+                                alt="Author"></span>
+                        <img src="assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top">
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-1.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-4.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">New Resturant</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <iframe class="border-0 w-100 position-relative" width="100" height="300" allow="autoplay"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/118951508&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-2.jpg"
+                                alt="Author"></span>
+                    </div>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-2.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-5.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">News Plans 2020</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+
+                <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
+                    <div class="image-wrap img-overlay position-relative">
+                        <span class="badge badge-secondary photocount position-absolute"><i class="icon-photo"></i>
+                            26</span>
+                        <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-3.jpg"
+                                alt="Author"></span>
+                        <img src="assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top">
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-3.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-3.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Item -->
-        <div class="item">
-            <div class="blog-grid boxhover transition w-100 mt-4 rounded shadow">
-                <div class="image-wrap img-overlay position-relative">
-                    <span class="badge badge-primary photocount pointer position-absolute"><i class="icon-eye"></i>
-                        25</span>
-                    <span class="author-avatar overflow-hidden position-absolute shadow"><img src="assets/img/author-1.jpg"
-                            alt="Author"></span>
-                    <img src="assets/img/event-grid-1.jpg" alt="img" class="img-fluid rounded-top">
-                </div>
-                <div class="content p-4">
-                    <p class="text-muted">Posted 2 days ago</p>
-                    <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
-                    <p class="description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
-                    </p>
-                    <hr>
-                    <div class="d-flex align-items-center">
-                        <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
-                        <a href="#"
-                            class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
-                                class="icon-download"></i></a>
+                    <div class="content p-4">
+                        <p class="text-muted">Posted 2 days ago</p>
+                        <h4 class="mb-3"><a href="#" class="text-decoration-none text-reset">Lorem ipsum dolor</a></h4>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt...
+                        </p>
+                        <hr>
+                        <div class="d-flex align-items-center">
+                            <a href="#" class="text-decoration-none text-primary">Tips and Lifestyle</a>
+                            <a href="#"
+                                class="bg-primary text-white readmore rounded text-decoration-none d-inline-flex align-items-center justify-content-center border-0 ml-auto"><i
+                                    class="icon-download"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
