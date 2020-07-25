@@ -8,10 +8,12 @@ export class InfopageService {
 
   productos: any[] = [];
   capacitaciones: any[] = [];
+  ferias: any[] = [];
 
   constructor(private http: HttpClient) {
     this.cargarProductos();
     this.cargarCapacitaciones();
+    this.cargarFerias();
   }
 
   private cargarProductos() {
@@ -26,6 +28,14 @@ export class InfopageService {
     this.http.get('https://vendame-d7a95.firebaseio.com/capacitaciones.json')
       .subscribe((resp: any) => {
         this.capacitaciones = resp;
+        console.log(resp);
+      });
+  }
+
+  private cargarFerias() {
+    this.http.get('https://vendame-d7a95.firebaseio.com/ferias.json')
+      .subscribe((resp: any) => {
+        this.ferias = resp;
         console.log(resp);
       });
   }

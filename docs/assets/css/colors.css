@@ -21,7 +21,7 @@ blockquote:before,
 .nice-select.default > span.current,
 .scroll-tabs > a.active
 {
-	color: #ee0979 !important;
+	color: rgb(255 188 0) !important;
 }
 
 
@@ -71,7 +71,7 @@ button.owl-prev:hover, button.owl-next:hover,
 .irs--big .irs-handle
 {
 	background: rgb(238,9,121) !important;
-	background: linear-gradient(90deg, rgba(238,9,121,1) 0%, rgba(255,106,0,1) 100%) !important;
+	background: linear-gradient(90deg, #0fad3e 0%, rgb(12 144 42) 100%) !important;
 }
 
 
@@ -81,7 +81,7 @@ button.owl-prev:hover, button.owl-next:hover,
 #et-search-event .event-results .photocount,
 .irs-single, .irs--big .irs-bar--single
 {
-	background: #ee0979 !important;
+	background: rgb(255 188 0) !important;
 }
 /************* Footer dark bg *************/
 .bg-footer
@@ -105,7 +105,7 @@ button.owl-prev:hover, button.owl-next:hover,
 .form-control:not(.subinput):active,
 .form-control:not(.subinput):hover,
 .scroll-tabs > a.active{
-	border-color: #ee0979 !important;
+	border-color: rgb(255 188 0) !important;
 }
 
 

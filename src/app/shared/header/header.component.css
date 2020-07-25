@@ -1,9 +1,4 @@
 .active {
-    color: red !important;
-}
-.active:after {
-    opacity: 1 !important;
-}
-.active:before {
-    opacity: 1 !important;
+    color: rgb(3, 150, 52) !important;
+    font-weight: 600;
 }

@@ -11,6 +11,7 @@ import { TrainingsComponent } from './pages/trainings/trainings.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductItemComponent } from './pages/product-item/product-item.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FairsComponent } from './pages/fairs/fairs.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './pages/home/home.component';
     TrainingsComponent,
     CategoriesComponent,
     ProductItemComponent,
-    HomeComponent
+    HomeComponent,
+    FairsComponent
   ],
   imports: [
     BrowserModule,

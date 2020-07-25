@@ -1,0 +1,43 @@
+<!-- Page Header -->
+<section id="et-pagehead"
+    class="container-fluid text-center text-white img-overlay no-hover position-relative pt-5 pb-5">
+    <div class="container position-relative pt-5 pb-5 mt-5 mb-5">
+        <h1 class="box-heading mb-5 position-relative mb-0 text-white">Ferias</h1>
+    </div>
+    <div class="breadcrumb position-absolute text-center m-0 justify-content-center bg-transparent text-white">
+        <a href="#" class="text-white d-inline-block p-2">Inicio</a>
+        <a href="#" class="text-white d-inline-block p-2">Ferias</a>
+    </div>
+</section>
+
+<!-- Speakers -->
+<section id="et-event-speakers" class="container-fluid">
+    <div class="container">
+        <div class="section-heading">
+            <p>Lorem ipsum dolor emet</p>
+            <br>
+            <h2 class="mb-0">Event Speakers</h2>
+        </div>
+        <!-- Speakers -->
+        <div class="event-Speakers inner content-box">
+            <div class="row">
+                <div class="col-md-4" *ngFor="let feria of infoService.ferias" style="margin-bottom: 50px;">
+                    <div class="speaker pt-25 position-relative">
+                        <img src="{{ feria.url }}" alt="speaker" height="300px" width="100%">
+                        <div class="content rounded shadow text-center p-2 w-75 m-auto bg-white transition position-relative">
+                            <h4><a href="#" class="text-decoration-none text-reset">{{ feria.nombre }}</a></h4>
+                            <p class="mb-0 text-primary">{{ feria.fecha }}</p>
+                            <ul class="social position-absolute transition d-inline-block m-0 nostyle inline p-0">
+                                <li><a href="#" class="d-flex align-items-center justify-content-center text-decoration-none transition"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="d-flex align-items-center justify-content-center text-decoration-none transition"><i class="fab fa-google" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="d-flex align-items-center justify-content-center text-decoration-none transition"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="d-flex align-items-center justify-content-center text-decoration-none transition"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="d-flex align-items-center justify-content-center text-decoration-none transition"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
