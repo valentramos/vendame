@@ -6,14 +6,24 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InfopageService {
 
+  categorias: any[] = [];
   productos: any[] = [];
   capacitaciones: any[] = [];
   ferias: any[] = [];
 
   constructor(private http: HttpClient) {
+    this.cargarCategorias();
     this.cargarProductos();
     this.cargarCapacitaciones();
     this.cargarFerias();
+  }
+
+  private cargarCategorias() {
+    this.http.get('https://vendame-d7a95.firebaseio.com/categorias.json')
+      .subscribe((resp: any) => {
+        this.categorias = resp;
+        console.log(resp);
+      });
   }
 
   private cargarProductos() {
