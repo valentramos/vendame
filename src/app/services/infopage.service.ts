@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class InfopageService {
 
   categorias: any[] = [];
-  productos: any[] = [];
+  productos_ecoferia: any[] = [];
   capacitaciones: any[] = [];
   ferias: any[] = [];
 
@@ -19,7 +19,7 @@ export class InfopageService {
   }
 
   private cargarCategorias() {
-    this.http.get('https://vendame-d7a95.firebaseio.com/categorias.json')
+    this.http.get('https://vendame-d7a95.firebaseio.com/productos_ecoferia/categorias.json')
       .subscribe((resp: any) => {
         this.categorias = resp;
         console.log(resp);
@@ -27,15 +27,15 @@ export class InfopageService {
   }
 
   private cargarProductos() {
-    this.http.get('https://vendame-d7a95.firebaseio.com/productos.json')
+    this.http.get('https://vendame-d7a95.firebaseio.com/productos_ecoferia/productos_ecoferia.json')
       .subscribe((resp: any) => {
-        this.productos = resp;
+        this.productos_ecoferia = resp;
         console.log(resp);
       });
   }
 
   private cargarCapacitaciones() {
-    this.http.get('https://vendame-d7a95.firebaseio.com/capacitaciones.json')
+    this.http.get('https://vendame-d7a95.firebaseio.com/productos_ecoferia/capacitaciones.json')
       .subscribe((resp: any) => {
         this.capacitaciones = resp;
         console.log(resp);
@@ -43,7 +43,7 @@ export class InfopageService {
   }
 
   private cargarFerias() {
-    this.http.get('https://vendame-d7a95.firebaseio.com/ferias.json')
+    this.http.get('https://vendame-d7a95.firebaseio.com/productos_ecoferia/ferias.json')
       .subscribe((resp: any) => {
         this.ferias = resp;
         console.log(resp);
