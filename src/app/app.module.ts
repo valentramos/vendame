@@ -12,6 +12,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductItemComponent } from './pages/product-item/product-item.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FairsComponent } from './pages/fairs/fairs.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FairsComponent } from './pages/fairs/fairs.component';
     CategoriesComponent,
     ProductItemComponent,
     HomeComponent,
-    FairsComponent
+    FairsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
