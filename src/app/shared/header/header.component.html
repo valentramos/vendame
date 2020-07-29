@@ -7,30 +7,6 @@
         <li><a routerLinkActive="active" routerLink="capacitaciones">Capacitaciones</a></li>
         <li><a routerLinkActive="active" routerLink="categorias">Categorias</a></li>
         <li><a routerLinkActive="active" routerLink="productos">Productos</a></li>
-        <!-- <li class="dropdown">
-            <a href="#">Pages</a>
-            <ul class="submenu shadow">
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="404.html">404</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li class="dropdown">
-                    <a href="#">Venues</a>
-                    <ul class="submenu shadow">
-                        <li><a href="our-venues.html">Our Venues</a></li>
-                        <li><a href="venue-detail.html">Venue Detail</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="dropdown">
-                    <a href="#">Speakers</a>
-                    <ul class="submenu shadow">
-                        <li><a href="speaker.html">Speakers Style 1</a></li>
-                        <li><a href="speaker-2.html">Speakers Style 2</a></li>
-                        <li><a href="speaker-profile.html">Speaker Profile</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li> -->
     </ul>
     <div class="nav-actions ml-auto">
         <a href="search.html"><i class="icon-search-2"></i> Buscar</a>
@@ -49,3 +25,117 @@
         <li><a routerLinkActive="active" routerLink="productos">Productos</a></li>
     </ul>
 </nav>
+
+<!-- Login Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id="exampleModalLabel">Iniciar Sesión</h4>
+                <button type="button" class="close position-absolute rounded-pill bg-primary text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-5">
+                <div class="social-signup text-center pb-25 pt-25">
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-google rounded-pill shadow text-white"></i> Iniciar con Google</a>
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-facebook rounded-pill shadow text-white"></i> Iniciar con Facebook</a>
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-twitter rounded-pill shadow text-white"></i> Iniciar coh Twitter</a>
+                </div>
+                <p class="or-sep">o</p>
+
+                <form autocomplete="off" (ngSubmit)="onSubmit(form)" #form="ngForm">
+                    <span class="float-none text-danger animated fadeIn" *ngIf="form.submitted && form.controls['email'].errors">Este campo es obligatorio</span>
+                    <div class="form-group">
+                        <input [(ngModel)]="usuario.email" required minlength="4" email type="email" class="form-control bg-light" placeholder="Correo electrónico" name="email">
+                    </div>
+                    <span class="float-none text-danger animated fadeIn" *ngIf="form.submitted && form.controls['password'].errors">Su datos no coinciden</span>
+                    <div class="form-group">
+                        <input [(ngModel)]="usuario.password" required minlength="8" type="password" class="form-control bg-light" placeholder="Contraseña" name="password">
+                    </div>
+                    <div class="form-group text-center mb-3 mt-4 check-types">
+                        <label for="logincheck">
+                            <input type="checkbox" id="logincheck">
+                            <span class="cbx rounded-pill float-none d-inline-block align-middle">
+                                <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                    <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                                </svg>
+                            </span>
+                            <span class="float-none text-black-50">Recordar mi correo | <a href="#" class="text-primary">Términos y Condiciones</a> y <a href="#" class="text-primary">Políticas de privacidad.</a></span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <div class="position-relative border-0 mt-md-0 mt-3 btn btn-primary submit-btn">
+                            <i class="icon-login btn-icon input-icon"></i> Iniciar Sesión
+                            <input type="submit" class="h-100 w-100 position-absolute" value="Submit Review">
+                        </div>
+                    </div>
+                    <div class="text-center pt-25">
+                        <p>Forgot password? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#resetPassword" class="text-primary">Reset now</a></p>
+                        <p>Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#signUpModal" class="text-primary">Registrarse</a></p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id="signUpModalLabel">Registrarse</h4>
+                <button type="button" class="close position-absolute rounded-pill bg-primary text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-5">
+                <div class="social-signup text-center pb-25">
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-google rounded-pill shadow text-white"></i> Registrarse con Google</a>
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-facebook rounded-pill shadow text-white"></i> Registrarse con Facebook</a>
+                    <a class="text-body p-2 text-decoration-none" href="#"><i class="fab fa-twitter rounded-pill shadow text-white"></i> Registrarse con Twitter</a>
+                </div>
+                <p class="or-sep">o</p>
+
+                <form autocomplete="off" (ngSubmit)="onRegister(register)" #register="ngForm">
+                    <span class="float-none text-danger animated fadeIn" *ngIf="register.submitted && register.controls['name'].errors">Este campo es obligatorio</span>
+                    <div class="form-group">
+                        <input [(ngModel)]="usuario.name" required minlength="4"  type="text" class="form-control bg-light" placeholder="Ingresa tu nombre completo" name="name">
+                    </div>
+                    <span class="float-none text-danger animated fadeIn" *ngIf="register.submitted && register.controls['email'].errors">Este campo es obligatorio</span>
+                    <div class="form-group">
+                        <input [(ngModel)]="usuario.email" required minlength="4" email type="email" class="form-control bg-light" placeholder="Ingresa tu correo electrónico" name="email">
+                    </div>
+                    <span class="float-none text-danger animated fadeIn" *ngIf="register.submitted && register.controls['password'].errors">Contraseña mínima de 8 digitos</span>
+                    <div class="form-group">
+                        <input [(ngModel)]="usuario.password" required minlength="8" password type="password" class="form-control bg-light" placeholder="Ingresa tu contraseña" name="password">
+                    </div>
+                    <div class="form-group text-center mb-3 mt-4 check-types">
+                        <label for="signupcheck">
+                            <input type="checkbox" id="signupcheck">
+                            <span class="cbx rounded-pill float-none d-inline-block align-middle">
+                                <svg width="12px" height="11px" viewBox="0 0 12 11">
+                                    <polyline points="1 6.29411765 4.5 10 11 1"></polyline>
+                                </svg>
+                            </span>
+                            <span class="float-none text-black-50">Acepto los <a href="#" class="text-primary">Términos y Condiciones</a> y <a href="#" class="text-primary">Políticas de privacidad.</a></span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <div class="position-relative border-0 mt-md-0 mt-3 btn btn-primary submit-btn">
+                            <i class="icon-login btn-icon input-icon"></i> Registrarse
+                            <input type="submit" class="h-100 w-100 position-absolute" value="Submit Review">
+                        </div>
+                    </div>
+                    <div class="text-center pt-25">
+                        <p>Forgot password? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#resetPassword" class="text-primary">Reset here</a></p>
+                        <p>Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#exampleModal" class="text-primary">Iniciar Sesión</a></p>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
