@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FairsComponent } from './pages/fairs/fairs.component';
 import { SearchComponent } from './pages/search/search.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'inicio', component: HomeComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'capacitaciones', component: TrainingsComponent },
   { path: 'categorias', component: CategoriesComponent },
   { path: 'search/:termino', component: SearchComponent },
-  { path: 'productos', component: ProductsComponent },
+  { path: 'productos', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
